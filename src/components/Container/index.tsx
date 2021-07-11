@@ -9,7 +9,7 @@ function Container() {
         <h3 className="mask">Creative Developer</h3>
         <h3 className="mask">Ui Design and Front End</h3>
 
-        <a href="" className="square">WORKS</a>
+        <a href="/" className="square">WORKS</a>
       </div>
 
       <div className="container-item">
