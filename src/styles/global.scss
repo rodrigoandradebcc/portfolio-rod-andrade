@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --black: #0d0e10;
+  --black-dark: #050607;
+  --black-light: #15171a;
+
+  --white: #f5f7f7;
+  --white-dark: #edeff0;
+  --white-light: #fafcfc;
+
+  --blue: #2dc7ed;
+  --blue-dark: #15aed4;
+  --blue-light: #4ddcff;
+}
+
+body {
+    width: 100%;
+
+    background-color: var(--black-dark);
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6, p, a{
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--white);
+    font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+}
+
+.link{
+  padding: 8px 24px;
+  font-size: 24px;
+
+  transition: .5s ease;
+
+  position: relative;
+
+  &::after{
+    content: '';
+    display: block;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 0%;
+    height: 2px;
+
+    transform: translate(20%, -50%);
+    transition: .5s ease;
+
+    background: var(--white);
+  }
+
+  &:hover{
+    opacity: .8;
+  
+    &::after{
+      width: 70%;
+    }
+  }
+}
+
+.border {
+  border: 1px solid red;
+}
+
+h1{
+  font-size: 96px;
+  line-height: 100%;
+}
+
+@media screen and (max-width: 960px){
+  h1{
+    font-size: 64px;
+  }
+
+  h2{
+    font-size: 48px;
+  }
+}
+
+h2{
+  font-size: 72px;
+  line-height: 110%;
+}
+
+h3{
+  font-size: 40px;
+  line-height: 110%;
+}
+
+h4{
+  line-height: 120%;
+  font-size: 32px;
+}
+
+h5{
+  font-size: 24px;
+  line-height: 130%;
+}
+
+h6{
+  line-height: 150%;
+  font-size: 16px;
+}
+
+.mask{ 
+  background: linear-gradient(225deg, #2DC7ED 0%, #538BF0 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.square{
+  display: inline-block;
+  margin-top: 64px;
+
+  font-size: 24px;
+
+  padding: 16px 24px;
+  position: relative;
+
+  &::after{
+    content: '';
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 120px;
+    height: 120px;
+
+    z-index: -1;
+
+    transform: translate(-5%, -22%) rotate(45deg);
+
+    background: linear-gradient(225deg, #2DC7ED 0%, rgba(83, 139, 240, 0) 100%);
+
+    border-radius: 4px;
+  }
+
+  &:hover{
+    &::after{
+      transform: translate(-5%, -22%) rotate(60deg);
+    }
+  }
+}
